@@ -30,6 +30,10 @@ Thanks to [B. Beaucamp](https://github.com/bbeaucamp) for his very useful help.
 
 > docker start t4gpd -a
 
+### To access the Jupyter server, open the url provided in console in a browser
+
+> http://127.0.0.1:8888/lab?token=&lt;&lt;&lt; TOKEN NUMBER &gt;&gt;&gt;
+
 ### To stop the container, proceed as follows
 
 > docker stop t4gpd
