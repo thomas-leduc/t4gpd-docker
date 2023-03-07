@@ -1,5 +1,8 @@
 # t4gpd-docker
-Docker image creation repository for the t4gpd plugin
+
+Docker image creation repository for the t4gpd plugin.
+
+Thanks to [B. Beaucamp](https://github.com/bbeaucamp) for his very useful help.
 
 ## To test this Docker image, proceed as follows
 
@@ -15,18 +18,18 @@ Docker image creation repository for the t4gpd plugin
 
 > docker create --name t4gpd -p 8888:8888 -v "$(pwd)":/workspace ghcr.io/thomas-leduc/t4gpd-ed:0.5.0
 
-- At Windows / DOS prompt:
+- At Windows DOS prompt:
 
 > docker create --name t4gpd -p 8888:8888 -v %cd%:/workspace ghcr.io/thomas-leduc/t4gpd-ed:0.5.0
 
-- At Windows powershell prompt:
+- At Windows PowerShell prompt:
 
 > docker create --name t4gpd -p 8888:8888 -v ${PWD}:/workspace ghcr.io/thomas-leduc/t4gpd-ed:0.5.0
 
-### If you have already cloned the image, you just need to launch the corresponding container as follows:
+### If you have already cloned the image, you just need to launch the corresponding container as follows
 
 > docker start t4gpd -a
 
-### To stop the container, proceed as follows:
+### To stop the container, proceed as follows
 
 > docker stop t4gpd
