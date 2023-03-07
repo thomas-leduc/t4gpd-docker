@@ -1,15 +1,15 @@
 # t4gpd-docker
 Docker image creation repository for the t4gpd plugin
 
-# To test this Docker image, proceed as follows
+## To test this Docker image, proceed as follows
 
-## Clone the repository and move into the corresponding directory
+### Clone the repository and move into the corresponding directory
 
 > git clone https://github.com/thomas-leduc/t4gpd-docker.git
 
 > cd t4gpd-docker
 
-## Clone the image at first launch
+### Clone the image at first launch
 
 - On MacOS or linux platforms:
 
@@ -23,10 +23,10 @@ Docker image creation repository for the t4gpd plugin
 
 > docker create --name t4gpd -p 8888:8888 -v ${PWD}:/workspace ghcr.io/thomas-leduc/t4gpd-ed:0.5.0
 
-## If you have already cloned the image, you just need to launch the corresponding container as follows:
+### If you have already cloned the image, you just need to launch the corresponding container as follows:
 
 > docker start t4gpd -a
 
-## To stop the container, proceed as follows:
+### To stop the container, proceed as follows:
 
 > docker stop t4gpd
