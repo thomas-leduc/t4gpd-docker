@@ -3,6 +3,12 @@ Docker image creation repository for the t4gpd plugin
 
 # To test this Docker image, proceed as follows
 
+## Clone the repository and move into the corresponding directory
+
+> git clone https://github.com/thomas-leduc/t4gpd-docker.git
+
+> cd t4gpd-docker
+
 ## Clone the image at first launch
 
 - On MacOS or linux platforms:
