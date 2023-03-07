@@ -17,7 +17,7 @@ Docker image creation repository for the t4gpd plugin
 
 > docker create --name t4gpd -p 8888:8888 -v ${PWD}:/workspace ghcr.io/thomas-leduc/t4gpd-ed:0.5.0
 
-## If you have already cloned (and started) the image, you just need to launch the corresponding container as follows:
+## If you have already cloned the image, you just need to launch the corresponding container as follows:
 
 > docker start t4gpd -a
 
