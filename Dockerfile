@@ -15,6 +15,7 @@ RUN conda install -y --channel=conda-forge --strict-channel-priority \
 	mapclassify \
 	matplotlib \
 	matplotlib-scalebar \
+	meshio \
 	networkx \
 	notebook \
 	openpyxl \
@@ -25,6 +26,7 @@ RUN conda install -y --channel=conda-forge --strict-channel-priority \
 	pywavelets \
 	rasterio \
 	scikit-learn \
+	scipy \
 	seaborn \
 	windrose \
 	xlrd \
@@ -49,11 +51,11 @@ RUN apt update && \
 		xvfb
 
 # ===== Install t4gpd =====
-# COPY ./t4gpd-0.7.1.tar.gz /workspace
-# RUN pip install t4gpd-0.7.1.tar.gz
-# RUN rm --force t4gpd-0.7.1.tar.gz
+# COPY ./t4gpd-0.8.0.tar.gz /workspace
+# RUN pip install t4gpd-0.8.0.tar.gz
+# RUN rm --force t4gpd-0.8.0.tar.gz
 
-RUN pip3 install -U --no-cache-dir t4gpd==0.7.1
+RUN pip3 install -U --no-cache-dir t4gpd==0.8.0
 
 # ===== Check =====
 # CMD python -c "import t4gpd; print(f'Version de t4gpd : {t4gpd.__version__}')"
