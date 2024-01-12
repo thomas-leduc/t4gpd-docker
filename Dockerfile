@@ -20,6 +20,7 @@ RUN conda install -y --channel=conda-forge --strict-channel-priority \
 	notebook \
 	openpyxl \
 	plotly \
+	pvlib \
 	pysolar \
 	python==3.10 \
 	pyvista \
