@@ -1,12 +1,16 @@
 # amd64 or arm64
 ARG arch=amd64
 
-FROM --platform=linux/${arch} continuumio/miniconda3:22.11.1
+FROM --platform=linux/${arch} condaforge/miniforge3:24.1.2-0
 
 WORKDIR /workspace
 
-# ===== Install via CONDA =====
-RUN conda install -y --channel=conda-forge --strict-channel-priority \
+# ===== Configure TimeZone -> tzdata =====
+ARG DEBIAN_FRONTEND=noninteractive
+ENV TZ=Etc/UTC
+
+#==== Install via MAMBA =====
+RUN mamba install -y \
 	contextily \
 	geocube \
 	geopandas==0.12.2 \
@@ -33,7 +37,7 @@ RUN conda install -y --channel=conda-forge --strict-channel-priority \
 	windrose \
 	xlrd \
 	xlwt \
-	&& conda clean -ya
+	&& mamba clean -ya
 
 # ===== Install via PIP =====
 RUN pip3 install -U --no-cache-dir \
@@ -53,11 +57,11 @@ RUN apt update && \
 		xvfb
 
 # ===== Install t4gpd =====
-# COPY ./t4gpd-0.8.0.tar.gz /workspace
-# RUN pip install t4gpd-0.8.0.tar.gz
-# RUN rm --force t4gpd-0.8.0.tar.gz
+# COPY ./t4gpd-0.9.0.tar.gz /workspace
+# RUN pip install t4gpd-0.9.0.tar.gz
+# RUN rm --force t4gpd-0.9.0.tar.gz
 
-RUN pip3 install -U --no-cache-dir t4gpd==0.8.0
+RUN pip3 install -U --no-cache-dir t4gpd==0.9.0
 
 # ===== Check =====
 # CMD python -c "import t4gpd; print(f'Version de t4gpd : {t4gpd.__version__}')"
