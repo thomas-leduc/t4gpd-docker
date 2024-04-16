@@ -26,6 +26,7 @@ RUN mamba install -y \
 	plotly \
 	pvlib \
 	Pyarrow \
+	pyogrio \
 	pysolar \
 	python==3.10 \
 	pyvista \
