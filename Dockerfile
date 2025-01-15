@@ -26,6 +26,7 @@ RUN mamba install -y \
 	plotly \
 	pvlib \
 	Pyarrow \
+	pymap3d \
 	pyogrio \
 	pysolar \
 	python==3.10 \
