@@ -16,15 +16,15 @@ Thanks to [B. Beaucamp](https://github.com/bbeaucamp) for his very useful help.
 
 - On MacOS or linux platforms:
 
-> docker create --name t4gpd -p 8888:8888 -v "$(pwd)":/workspace ghcr.io/thomas-leduc/t4gpd-ed:0.9.7
+> docker create --name t4gpd -p 8888:8888 -v "$(pwd)":/workspace ghcr.io/thomas-leduc/t4gpd-ed:0.9.8
 
 - At Windows DOS prompt:
 
-> docker create --name t4gpd -p 8888:8888 -v %cd%:/workspace ghcr.io/thomas-leduc/t4gpd-ed:0.9.7
+> docker create --name t4gpd -p 8888:8888 -v %cd%:/workspace ghcr.io/thomas-leduc/t4gpd-ed:0.9.8
 
 - At Windows PowerShell prompt:
 
-> docker create --name t4gpd -p 8888:8888 -v ${PWD}:/workspace ghcr.io/thomas-leduc/t4gpd-ed:0.9.7
+> docker create --name t4gpd -p 8888:8888 -v ${PWD}:/workspace ghcr.io/thomas-leduc/t4gpd-ed:0.9.8
 
 ### If you have already cloned the image, you just need to launch the corresponding container as follows
 
