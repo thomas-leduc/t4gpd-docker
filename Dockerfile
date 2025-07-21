@@ -23,6 +23,7 @@ RUN mamba install -y \
 	networkx \
 	notebook \
 	openpyxl \
+	overpy \
 	plotly \
 	pvlib \
 	Pyarrow \
