@@ -60,11 +60,11 @@ RUN apt update && \
 		xvfb
 
 # ===== Install t4gpd =====
-# COPY ./t4gpd-0.9.8.tar.gz /workspace
-# RUN pip install t4gpd-0.9.8.tar.gz
-# RUN rm --force t4gpd-0.9.8.tar.gz
+# COPY ./t4gpd-0.9.9.tar.gz /workspace
+# RUN pip install t4gpd-0.9.9.tar.gz
+# RUN rm --force t4gpd-0.9.9.tar.gz
 
-RUN pip3 install -U --no-cache-dir t4gpd==0.9.8
+RUN pip3 install -U --no-cache-dir t4gpd==0.9.9
 
 # ===== Check =====
 # CMD python -c "import t4gpd; print(f'Version de t4gpd : {t4gpd.__version__}')"
