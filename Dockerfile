@@ -33,6 +33,7 @@ RUN mamba install -y \
 	python==3.10 \
 	pyvista \
 	pywavelets \
+	py7zr \
 	rasterio \
 	scikit-learn \
 	scipy \
