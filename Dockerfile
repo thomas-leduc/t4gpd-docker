@@ -12,6 +12,7 @@ ENV TZ=Etc/UTC
 #==== Install via MAMBA =====
 RUN mamba install -y \
 	contextily \
+	fiona \
 	geocube \
 	geopandas==0.12.2 \
 	imageio \
