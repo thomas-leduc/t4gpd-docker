@@ -44,6 +44,9 @@ RUN mamba install -y \
 	xlwt \
 	&& mamba clean -ya
 
+RUN find /opt/conda -type d -name "__pycache__" -prune -exec rm -rf {} + && \
+	find /opt/conda -type f -name "*.pyc" -delete
+
 # ===== Install via PIP =====
 RUN pip3 install -U --no-cache-dir \
 	dijkstar \
@@ -51,15 +54,16 @@ RUN pip3 install -U --no-cache-dir \
 	suntimes
 
 # ===== Install apt =====
-RUN apt update && \
-	apt install -y \
-		ffmpeg \
-		libfontconfig1 \
-		libgl1-mesa-glx \
-		libsm6 \
-		libxext6 \
-		libxrender1 \
-		xvfb
+RUN apt-get update && \
+    apt-get install -y --no-install-recommends \
+        ffmpeg \
+        libfontconfig1 \
+        libgl1 \
+        libsm6 \
+        libxext6 \
+        libxrender1 \
+        xvfb \
+    && rm -rf /var/lib/apt/lists/*
 
 # ===== Install t4gpd =====
 # COPY ./t4gpd-1.0.0.tar.gz /workspace
